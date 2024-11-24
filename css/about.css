@@ -1,9 +1,15 @@
 /* Base styles for about section */
 .about-section {
-   
+    width: 100%;
+    display: flex;
     overflow: hidden;
     position: relative;
+    min-height: 100vh;
+
 }
+
+
+
 
 .about-wrapper {
     display: flex;
@@ -18,7 +24,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 33px 0 150px;
     color: var(--primary-purple);
     position: relative;
     z-index: 1;
@@ -29,7 +34,7 @@
     position: absolute;
     bottom: 0;
     left: -400px;
-    width: 764px;
+    width: 50%;
     height: 764px;
     border-radius: 764px;
     background: radial-gradient(50% 50% at 50% 50%, rgba(117, 47, 134, 0.50) 0%, rgba(26, 26, 27, 0.19) 100%);
@@ -105,15 +110,25 @@
 }
 
 .about-image-wrapper {
-    min-height: 100vh;
-    padding-top: clamp(50px, 8vw, 100px);
     width: 50%;
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    background: linear-gradient(180deg, #752F86 5.16%, rgba(170, 0, 212, 0.36) 57.32%, rgba(255, 255, 255, 0.00) 89.29%);
+    align-items: center;
     border-radius: 0px 0px 0px 120px;
+    overflow: visible;
+}
+
+.about-image-wrapper::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(180deg, #752F86 5.16%, rgba(170, 0, 212, 0.36) 57.32%, rgba(255, 255, 255, 0.00) 89.29%);
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 0px 0px 0px 200px;
 }
 
 .about-img {

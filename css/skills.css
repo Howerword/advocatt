@@ -3,12 +3,15 @@
     margin: 0 auto;
     padding: 100px 0;
     position: relative;
+    
+    
 }
 .services-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
 }
 .text-subtitle {
     font-size: 16px;
@@ -85,6 +88,7 @@
     );
     filter: blur(8.4px);
     pointer-events: none;
+    
 }
 
 .services-section::before {
