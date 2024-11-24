@@ -24,6 +24,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -32,6 +33,9 @@ body {
   line-height: 1.5;
   background-color: var(--dark-bg);
   color: var(--text-white);
+  margin:0 auto;
+  overflow-x: hidden;
+  
 }
 
 .container {

@@ -4,19 +4,11 @@
     display: flex;
     overflow: hidden;
     position: relative;
+    min-height: 100vh;
+
 }
 
-.about-section::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 705px;
-    height: 1208px;
-    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="704" height="909" viewBox="0 0 704 909" fill="none"><path d="M0 -143C0 -209.274 53.7258 -263 120 -263H584C650.274 -263 704 -209.274 704 -143V787.942C704 867.051 628.791 924.515 552.463 903.724L88.4631 777.339C36.2373 763.114 0 715.686 0 661.557V-143Z" fill="url(%23paint0_linear_11_3)"/><defs><linearGradient id="paint0_linear_11_3" x1="352" y1="-200.653" x2="352" y2="815.59" gradientUnits="userSpaceOnUse"><stop stop-color="%23752F86"/><stop offset="0.62" stop-color="%23AA00D5" stop-opacity="0.36"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient></defs></svg>');    background-size: contain;
-    z-index: -1;
-    pointer-events: none;
-}
+
 
 
 .about-wrapper {
@@ -32,7 +24,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 33px 0 150px;
     color: var(--primary-purple);
     position: relative;
     z-index: 1;
@@ -43,7 +34,7 @@
     position: absolute;
     bottom: 0;
     left: -400px;
-    width: 764px;
+    width: 50%;
     height: 764px;
     border-radius: 764px;
     background: radial-gradient(50% 50% at 50% 50%, rgba(117, 47, 134, 0.50) 0%, rgba(26, 26, 27, 0.19) 100%);
@@ -119,17 +110,25 @@
 }
 
 .about-image-wrapper {
-    min-height: 100vh;
-    padding-top: clamp(50px, 8vw, 100px);
     width: 50%;
-    position: relative;
     display: flex;
-    flex: 1;
     justify-content: center;
-    align-items: flex-end;
-    /* background: linear-gradient(180deg, #752F86 5.16%, rgba(170, 0, 212, 0.36) 57.32%, rgba(255, 255, 255, 0.00) 89.29%); */
+    align-items: center;
     border-radius: 0px 0px 0px 120px;
     overflow: visible;
+}
+
+.about-image-wrapper::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(180deg, #752F86 5.16%, rgba(170, 0, 212, 0.36) 57.32%, rgba(255, 255, 255, 0.00) 89.29%);
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 0px 0px 0px 200px;
 }
 
 .about-img {
