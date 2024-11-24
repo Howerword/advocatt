@@ -1,0 +1,57 @@
+.portfolio-section {
+}
+.portfolio-wrapper {
+    margin: 0 auto;
+    min-height: 100vh;
+}
+.portfolio-text {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.portfolio-title {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 70px;
+    color: var(--primary-purple);
+}
+.portfolio-description {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-white);                 
+    font-weight: 400;
+}
+
+.swiper {
+    overflow: visible;
+    min-height: 60vh;
+}
+
+.slider-wrapper {
+    margin-top: 70px;
+    overflow: visible;
+}
+
+.swiper-slide {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.swiper-slide-active {
+    transform: scale(1.2);
+    & .portfolio-img {
+        height: 520px;
+        width: 360px;
+        border-radius: 32px;
+    }
+}
+
+.portfolio-img {
+    width: 360px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.swiper-pagination, .slider-pagination {
+    position: relative;
+    margin-top: 50px;
+}
