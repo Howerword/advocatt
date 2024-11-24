@@ -1,19 +1,24 @@
 .portfolio-section {
+    position: relative;
 }
+
 .portfolio-wrapper {
     margin: 0 auto;
     min-height: 100vh;
 }
+
 .portfolio-text {
     max-width: 1440px;
     margin: 0 auto;
 }
+
 .portfolio-title {
     font-size: 64px;
     font-weight: 600;
     line-height: 70px;
     color: var(--primary-purple);
 }
+
 .portfolio-description {
     font-size: 16px;
     line-height: 24px;
@@ -21,12 +26,17 @@
     font-weight: 400;
 }
 
+.portfolio-swiper {
+    position: relative; /* Додано */
+}
+
 .swiper {
     overflow: visible;
     min-height: 60vh;
+    position: relative;
 }
 
-.slider-wrapper {
+.swiper-wrapper.slider-wrapper {
     margin-top: 70px;
     overflow: visible;
 }
@@ -51,7 +61,34 @@
     border-radius: 15px;
 }
 
-.swiper-pagination, .slider-pagination {
-    position: relative;
-    margin-top: 50px;
+/* Оновлені стилі для кнопок навігації */
+.swiper-button-prev.slider-button, 
+.swiper-button-next.slider-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    background: var(--primary-purple);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -100px; /* Позиціонування знизу */
+    z-index: 1;
+}
+
+/* Позиціонування кнопок окремо */
+.swiper-button-prev.slider-button {
+    right: 70px; /* Відступ для попередньої кнопки */
+}
+
+.swiper-button-next.slider-button {
+    right: 0; /* Притискаємо наступну кнопку до правого краю */
+}
+
+/* Прибираємо стандартні стрілки Swiper */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
 }
